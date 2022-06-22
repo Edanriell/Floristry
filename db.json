@@ -1,0 +1,42 @@
+{
+  "boughtServices": [
+    {
+      "name": "asdas",
+      "surname": "asda",
+      "address": "asdasd",
+      "email": "sdasd@asd",
+      "phone": "151``51",
+      "select-radio": "on",
+      "id": 1
+    },
+    {
+      "name": "asdsa",
+      "surname": "sdads",
+      "address": "asdasd",
+      "email": "asda@asd",
+      "phone": "51515",
+      "Букет невесты и свадебное оформление": "on",
+      "id": 2
+    }
+  ],
+  "boughtGiftCards": [
+    {
+      "name": "aasd",
+      "surname": "asdas",
+      "address": "asda@asd",
+      "email": "asda@asd",
+      "phone": "asdas",
+      "select-radio": "on",
+      "id": 1
+    },
+    {
+      "name": "asdasdsada",
+      "surname": "asdasd",
+      "address": "asda@asdffa13513",
+      "email": "ssdfasdgsdfrg@sdf",
+      "phone": "131216516161",
+      "Подарочная карта на 6 000 рублей": "on",
+      "id": 2
+    }
+  ]
+}

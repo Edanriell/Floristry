@@ -1,0 +1,136 @@
+$giftCardsSectionHeight: 1058px
+
+.gift-cards
+  height: $giftCardsSectionHeight
+  &__content
+    padding-top: 247px
+.gift-cards-list
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 60px
+  &__gift-card-wrapper
+.gift-card
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  position: relative
+  background-color: #281014
+  &_size_m
+    width: 348px
+    height: 574px
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.4)
+    border-radius: 8px 8px 0px 0px
+    & > p:nth-of-type(1)
+      margin-bottom: 111px
+    &::after
+      position: absolute
+      content: ""
+      width: 306px
+      height: 59.89px
+      top: 366px
+      left: 50%
+      transform: translateX(-50%)
+      background: no-repeat url("../img/gift-cards/gift-card-flower-m.svg")
+  &_size_b
+    width: 420px
+    height: 694px
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.5)
+    border-radius: 10px 10px 0px 0px
+    & > p:nth-of-type(1)
+      margin-bottom: 128px 
+    &::after
+      content: ""
+      position: absolute
+      width: 380px
+      height: 74.03px
+      top: 444px
+      left: 50%
+      transform: translateX(-50%)
+      background: no-repeat url("../img/gift-cards/gift-card-flower-b.svg")
+  &__header
+    display: flex
+    flex-direction: column
+    padding: 10px
+    box-sizing: border-box
+    position: relative
+    &_size_m
+      width: 348px
+      height: 219px
+      border-radius: 8px
+      margin-bottom: 70px
+      &::before
+        content: ""
+        position: absolute
+        width: 101px
+        height: 101px
+        top: 10px
+        left: 10px
+        background: no-repeat url("../img/gift-cards/gift-card-image-decoration-m.svg")
+      &::after
+        content: ""
+        position: absolute
+        width: 101px
+        height: 101px
+        bottom: 10px
+        right: 10px
+        background: no-repeat url("../img/gift-cards/gift-card-image-decoration-m.svg")
+        transform: rotate(180deg)
+      & > p:nth-of-type(1)
+        margin-bottom: 48.97px
+      & > p:nth-of-type(2)
+        margin-top: 44.71px
+    &_size_b
+      width: 420px
+      height: 264px
+      border-radius: 10px
+      margin-bottom: 99px
+      &::before
+        content: ""
+        position: absolute
+        width: 122px
+        height: 122px
+        top: 10px
+        left: 10px
+        background: no-repeat url("../img/gift-cards/gift-card-image-decoration-b.svg")
+      &::after
+        content: ""
+        position: absolute
+        width: 122px
+        height: 122px
+        bottom: 10px
+        right: 10px
+        background: no-repeat url("../img/gift-cards/gift-card-image-decoration-b.svg")
+        transform: rotate(180deg)
+      & > p:nth-of-type(1)
+        margin-bottom: 62px
+      & > p:nth-of-type(2)
+        margin-top: 62px
+    &_background_blue
+      background: rgba(38, 40, 53, 1)
+    &_background_black
+      background: rgba(10, 10, 14, 1)
+    &_background_gray
+      background: rgba(16, 17, 22, 1)
+  &__header-card-id
+    display: flex
+    font-size: 2.1rem
+    line-height: 23px
+    letter-spacing: 0.06em
+    color: inherit
+    justify-content: flex-end
+  &__header-card-img
+    margin: 0 auto
+  &__header-card-price
+    display: flex
+    font-size: 2.1rem
+    line-height: 23px
+    letter-spacing: 0.06em
+    color: inherit
+    justify-content: flex-start
+  &__description
+    font-size: 1.8rem
+    line-height: 27px
+    text-align: center
+    max-width: 281px
+    margin: 0 auto

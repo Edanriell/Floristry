@@ -1,0 +1,164 @@
+@import ~normalize.css
+@import "./fonts/forum"
+@import "header"
+@import "promo"
+@import "service-catalog"
+@import "discount"
+@import "new-service"
+@import "gift-cards"
+@import "partners"
+@import "footer"
+@import "animations"
+@import "scroll"
+@import "modal"
+@import "customSelect"
+@import "notification"
+
+*
+  padding: 0
+  margin: 0
+html
+  font-size: 62.5%
+  scroll-behavior: smooth
+h1,h2,h3,h4,h5,h6
+  margin: 0
+ul,li
+  list-style: none
+a
+  text-decoration: none
+  color: rgba(255, 255, 255, 1)
+button,input
+  border: none
+body
+  font-family: "Forum-Regular", Arial, Helvetica, sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 2rem
+  line-height: 22px
+  color: rgba(255, 255, 255, 1)
+  background: no-repeat url("../img/main-image.png") center top #3B181E
+.container-big
+  width: 1730px
+  margin: 0 auto
+  padding-left: 15px
+  padding-right: 15px
+.container-small
+  width: 1180px
+  margin: 0 auto
+  padding-left: 15px
+  padding-right: 15px
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto
+  box-sizing: border-box
+  font-size: 12px
+  line-height: 13px
+  text-align: center
+  letter-spacing: 0.15em
+  text-transform: uppercase
+  color: inherit
+  background: rgba(0, 0, 0, 0.4)
+  border: 1px solid #FFFFFF
+  cursor: pointer
+  transition: all 0.2s ease-in-out
+  &:hover
+    background: rgba(255, 255, 255, 1)
+    color: #000
+  &_size_m
+    width: 199px
+    height: 50px
+  &_size_b
+    width: 220px
+    height: 50px
+    background: transparent
+    margin: 0 auto auto 0
+  &_size_s
+    width: 135px
+    height: 50px
+    background: transparent
+    margin: 0 auto 0 0
+  &_size_us
+    width: 134px
+    height: 50px
+    background: transparent
+  &_color_black
+    border: 1px solid #000
+    background: #000
+    color: #FFF
+    &:hover
+      background: #000
+      color: #FFF
+.section-header
+  position: relative
+  display: flex
+  flex-direction: column-reverse
+  &_size_m
+    max-width: 381px
+  &_size_b
+    max-width: 520px
+  &_size_s
+    max-width: 302px
+    margin: 0 auto
+    &::before
+      width: 85.5px
+      margin-top: 22px !important
+      margin-left: auto
+      margin-right: auto
+  &__line_size_b::before
+      width: 96px !important
+  &__text
+    font-size: 5rem
+    line-height: 55px
+    letter-spacing: 0.09em
+    text-transform: uppercase
+    &_size_s
+      font-size: 3rem
+      line-height: 33px
+      letter-spacing: 0.06em
+  &::before
+    content: ""
+    width: 85.5px
+    height: 2px
+    background: #FFFFFF
+    margin-top: 31px
+.two-level-header
+  position: relative
+  z-index: 2
+  &__text
+    text-align: center
+    font-size: 3rem
+    line-height: 33px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    margin-bottom: -2.4rem
+    color: inherit
+    &:after
+      content: ""
+      width: 85.5px
+      height: 2px
+      top: 48px
+      left: 50%
+      background: #FFFFFF
+      transform: translateX(-50%)
+      position: absolute
+  &__alternative-text
+    font-size: 22rem
+    line-height: 243px
+    text-align: center
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    text-align: center
+    color: rgba(255, 255, 255, 0.03)

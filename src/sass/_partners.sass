@@ -1,0 +1,37 @@
+$partnersSectionHeight: 1062px
+=fixImageBug
+  vertical-align: middle
+  max-width: 100%
+  height: auto
+
+.partners
+  height: $partnersSectionHeight
+  &__content
+    padding-top: 271px
+    padding-bottom: 196px
+.partners-list
+  display: flex
+  flex-wrap: wrap
+  max-width: 1176px
+  max-height: 470px
+  justify-content: space-between
+  padding-top: 68px
+  &__item
+    margin-bottom: 34px
+  &__link
+  &__image
+    +fixImageBug
+    object-fit: cover
+    transition: all 0.2s ease-in-out
+    &_size_m
+      width: 370px
+      height: 122px
+    &_size_b
+      width: 571px
+      height: 190px
+    &_size_s
+      width: 268px
+      height: 90px
+    &:hover
+      transform: scale(1.08)
+      filter: brightness(125%)

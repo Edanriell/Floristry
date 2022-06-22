@@ -1,0 +1,57 @@
+$newServiceSectionHeight: 858.422px
+=fixImageBug
+  vertical-align: middle
+
+.new-service
+  height: $newServiceSectionHeight
+  &__content
+    display: flex
+    justify-content: space-between
+  &__main-image-wrapper
+    position: relative
+  &__main-image
+    width: 1000px
+    height: 855px
+    object-fit: cover
+    +fixImageBug
+  &__main-image-border
+    position: absolute
+    top: 25px
+    left: 34px
+  &__main-content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    padding-top: 116px
+    padding-bottom: 129px
+  &__text
+    font-size: 1.8rem
+    line-height: 27px
+    color: inherit
+    max-width: 610px
+    margin-top: 25px
+    margin-bottom: 30px
+.image-list
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-wrap: wrap
+  max-width: 560px
+  padding-top: 100px
+  &__item
+    margin-right: 20px
+    overflow: hidden
+    &:last-child
+      margin-right: 0
+  &__image
+    display: block
+    width: 123px
+    height: 123px
+    cursor: pointer
+    transform: scale(1)
+    transition: .2s ease-in-out
+    object-fit: cover
+    +fixImageBug
+    &:hover
+      transform: scale(1.4)
+      filter: brightness(125%)

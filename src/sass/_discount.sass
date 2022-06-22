@@ -1,0 +1,40 @@
+$discountSectionHeight: 680px
+=fixImageBug
+  vertical-align: middle
+  max-width: 100%
+
+.discount
+  height: $discountSectionHeight
+  &__content
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding-bottom: 270px
+  &__main-content
+    display: flex
+    flex-direction: column
+    padding-top: 41px
+    margin-right: 94px
+  &__text
+    font-size: 1.8rem
+    line-height: 31px
+    color: inherit
+    max-width: 397px
+    margin-top: 25px
+    margin-bottom: 31px
+  &__image-wrapper
+    position: relative
+    overflow-y: visible !important
+  &__image
+    width: 697px
+    height: 410px
+    padding-bottom: 22px
+    object-fit: cover
+    +fixImageBug
+  &__image-border
+    position: absolute
+    top: 22px
+    left: 27px
+    z-index: 9999
+.swiper
+  margin-left: 75px

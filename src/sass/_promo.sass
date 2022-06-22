@@ -1,0 +1,55 @@
+$socialIcons: "../img/icons/inst.svg" 1, "../img/icons/fb.svg" 2, "../img/icons/whatsapp.svg" 3, "../img/icons/vk.svg" 4
+
+@each $url, $index in $socialIcons
+  .social-btns__item:nth-child(#{$index})
+    background: no-repeat url($url) center transparent
+    width: 25px
+    height: 25px
+    cursor: pointer
+
+.promo
+  display: flex
+  flex-direction: column
+  padding-bottom: 114px
+  &__main-header
+    font-size: 12rem
+    line-height: 132px
+    letter-spacing: 0.09em
+    text-transform: uppercase
+    text-align: center
+    width: 820px
+    max-width: 820px
+    margin: 102px auto 80px auto
+  &__content
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    margin-top: 41px !important
+.social-btns
+  display: flex
+  flex-direction: column
+  &__item
+    margin-bottom: 24px
+    transition: all 0.2s ease-in-out
+    &:last-child
+      margin-bottom: 0
+    &:hover
+      transform: scale(1.4)
+  &__link
+.mouse-icon
+.catalog-link
+  writing-mode: vertical-rl
+  text-orientation: mixed
+  letter-spacing: 0.06em
+  text-transform: lowercase
+  display: flex
+  align-items: center
+  &:after
+    content: ''
+    width: 12px
+    height: 20px
+    background: no-repeat url("../img/icons/arrow-down.svg") center transparent
+    margin-top: 30px
+    transition: all 0.2s ease-in-out
+  &:hover::after
+    transform: translateY(10px)

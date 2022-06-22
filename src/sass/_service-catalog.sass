@@ -1,0 +1,110 @@
+$decorativeNums: 1,2,3,4,5,6,7,8
+
+@each $num in $decorativeNums
+  .service-list__item:nth-child(#{$num})
+    &:before
+      content: '0#{$num}'
+      position: absolute
+      top: 50px
+      left: 30px
+    &:after
+      content: ""
+      width: 70px
+      height: 1px
+      background: #FFFFFF
+      position: absolute
+      top: 64px
+      left: 62px
+      overflow: hidden
+
+.service-catalog
+  &__content
+    padding-top: 172px
+    padding-bottom: 192px
+.service-list
+  display: flex
+  justify-content: flex-start
+  align-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  flex-direction: column
+  height: 1140px // change
+  padding: 0 100px 0 110px
+  margin-top: -106px // change
+  z-index: 1
+  &__item
+    position: relative
+    width: 350px
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    margin-bottom: 40px
+    margin-right: 40px
+    box-sizing: border-box
+    &_size_m
+      height: 387px
+    &_size_l
+      height: 752px
+    &_size_b
+      height: 512px
+    &_size_s
+      height: 288px
+    &:nth-child(1)
+      order: 1
+    &:nth-child(2)
+      order: 3
+    &:nth-child(3)
+      order: 5
+    &:nth-child(4)
+      order: 7
+    &:nth-child(5)
+      order: 2
+    &:nth-child(6)
+      order: 4
+    &:nth-child(7)
+      order: 6
+    &:nth-child(8)
+      order: 8
+  &__content
+    display: flex
+    flex-direction: column
+    padding: 10px 10px 16.52px 10px
+  &__service-name
+    font-size: 1.6rem
+    line-height: 27px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: inherit
+    order: 2
+    margin-top: 20px
+  &__service-image
+    max-width: 328px
+    max-height: 610px
+    order: 1
+  &__service-button
+    font-size: 1.2rem
+    line-height: 13px
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    color: inherit
+    background-color: transparent
+    text-align: left
+    cursor: pointer
+    height: 18.55px
+    text-rendering: optimizeLegibility
+    display: inline-block
+    position: relative
+    transition: transform 360ms
+    &:after
+      content: attr(data-hover)
+      position: absolute
+      top: -20px
+      left: 0
+      height: 18.55px
+      transform: translate3d(0,0,0)
+    &:hover
+      transform: translateY(24px)
+  &__service-button-wrapper
+    margin-top: 44px
+    order: 3
+    display: inline-block
+    height: 18.55px
+    overflow: hidden

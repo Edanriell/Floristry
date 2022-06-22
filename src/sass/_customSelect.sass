@@ -1,0 +1,120 @@
+$fontSize: 1.6rem
+
+$selectBackgroundColor: transparent
+$selectBackgroundColorHover: transparent
+$selectBackgroundColorFocus: transparent
+$selectTextColor: #000
+
+$poppingMenuPosition: translate(-50%, -30%) scale(1)
+$poppingMenuPosition2: translate(-50%, 50%) scale(1)
+$poppingMenuBackgroundColor: #FFF
+$poppingMenuBackgroundColorSelectHover: #ededed
+$poppingMenuBackgroundColorSelectFocus: #e1e1e1
+
+$dotColor: #691120
+$dotBorderColor: #cfd8dc
+$dotInnerColor: #fafafa
+
+.select
+  box-sizing: border-box
+  display: flex
+  align-items: center
+  width: 475px
+  background-color: $selectBackgroundColor
+  color: $selectTextColor
+  //box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25)
+  cursor: pointer
+  user-select: none
+  padding: 18px 0 18px 0
+  border-radius: 0
+  transition: all 0.2s ease-in-out
+  border-bottom: 1px solid #cccccc
+  font-size: $fontSize
+  input[type=radio]
+    z-index: 9999
+  &:focus
+    outline: 0
+    .list
+      opacity: 1
+      transform: $poppingMenuPosition
+      pointer-events: all
+    .list2
+      opacity: 1
+      transform: $poppingMenuPosition2
+      pointer-events: all
+  &:hover
+    background-color: $selectBackgroundColorHover
+    border-bottom: 1px solid #691120
+  &:focus
+    background-color: $selectBackgroundColorFocus
+    transition: 400ms ease
+  &::after
+    content: ""
+    display: inline-block
+    margin-left: auto
+    border-left: 0.3755rem solid transparent
+    border-right: 0.3755rem solid transparent
+    border-top: 0.375rem solid #691120
+  .list
+    position: fixed
+    top: 50%
+    left: 50%
+    max-height: 600px
+    width: clamp(400px, 75vw, 320px)
+    border-radius: 0
+    background-color: $poppingMenuBackgroundColor
+    color: #000
+    transform: translate(-50%, -50%) scale(0)
+    transition: all 400ms ease
+    opacity: 0
+    pointer-events: none
+    overflow: hidden
+    overflow-y: auto
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px
+    z-index: 99999999
+    .group
+      padding: 0.75rem 0
+      &:not(:last-child)
+        border-bottom: 1px solid #e1e1e1
+    label
+      display: flex
+      align-items: center
+      padding: 1.25rem 1.5rem
+      cursor: pointer
+      transition: all 0.15s ease-in-out
+      &:hover
+        background-color: $poppingMenuBackgroundColorSelectHover
+      &:active
+        background-color: $poppingMenuBackgroundColorSelectFocus
+        transition: 400ms ease
+      input[type=radio]
+        margin-right: 1rem
+input[type=radio]
+  position: relative
+  height: 24px
+  width: 24px
+  margin: 0
+  border-radius: 50%
+  border: solid 1px $dotBorderColor
+  background-color: transparent
+  appearance: none
+  cursor: pointer
+  &:checked
+    border: none
+    background-color: $dotColor
+    z-index: 9999
+    &::before
+      display: block
+  &:focus
+    outline: 0
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    display: none
+    width: 50%
+    height: 50%
+    border-radius: 50%
+    background-color: $dotInnerColor
+    transform: translate(-50%, -50%)
